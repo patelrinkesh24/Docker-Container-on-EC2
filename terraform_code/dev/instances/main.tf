@@ -74,7 +74,6 @@ resource "aws_security_group" "my_sg" {
     to_port          = 22
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
   }
 
   ingress {
@@ -83,7 +82,6 @@ resource "aws_security_group" "my_sg" {
     to_port          = 8080
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
   }
 
   ingress {
@@ -92,7 +90,6 @@ resource "aws_security_group" "my_sg" {
     to_port          = 8081
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
   }
 
   egress {
@@ -118,4 +115,14 @@ resource "aws_eip" "static_eip" {
       "Name" = "${local.name_prefix}-eip"
     }
   )
+}
+
+# Creating ECR Repository
+resource "aws_ecr_repository" "cats-assignment1" {
+  name = "cats-assignment1" 
+}
+
+#Creating ECR Repository
+resource "aws_ecr_repository" "dogs-assignment1" {
+  name = "dogs-assignment1"
 }
