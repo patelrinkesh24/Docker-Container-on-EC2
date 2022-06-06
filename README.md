@@ -8,5 +8,6 @@ Create Dockerfile, build docker image and deploy docker container on Amazon Linu
 5. cloned the github repository created.
 6. created a work flow to push images into ECR
 7. once the images are pushed, login to ec2 user using eip
-8. running two dockers for cats and dogs for port 8080 and 8081 respectively.
-9. 
+8. pulling images using docker pull.
+9. running two dockers for cats and dogs for port 8080 and 8081 respectively.
+10. checking the output on web browser.
