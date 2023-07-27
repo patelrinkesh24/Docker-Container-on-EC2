@@ -11,6 +11,8 @@ The application's architecture consists of the following components:
 - Amazon ECR: Docker images of the Cats and Dogs application are securely stored in this container registry.
 - AWS EC2: The containerized application is hosted on an EC2 instance, deployed in a public subnet of the default VPC for simplicity of debugging.
 
+![project-2](https://github.com/patelrinkesh24/deploy-docker-container-on-Amazon-Linux-EC2/assets/50281621/3ec11942-66cb-46e5-9ec9-80cac8edd871)
+
 ## Getting Started
 
 To get started with the Cats and Dogs Cloud Application, follow these steps:
