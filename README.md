@@ -102,13 +102,3 @@ To update the Cats and Dogs application, follow these steps:
 3. GitHub Actions will automatically trigger a build of the updated Docker images and push them to Amazon ECR.
 
 4. Log into the EC2 instance, pull the updated images, and redeploy the containers following the same steps as described in the "Deployment to AWS EC2" section.
-
-## Frequently Asked Questions
-
-1. **Why can we run two applications listening on the same port 80 on a single EC2 instance?**
-
-   This is possible because each container runs in its isolated environment with its own network namespace. When mapping container port 80 to different host ports (e.g., 8080 and 8081), the traffic is directed to the respective containers based on the specified host port. The containers are kept separate and can run side by side without conflicts.
-
----
-
-We hope you find this README helpful in understanding and using the Cats and Dogs Cloud Application. If you have any questions or encounter any issues, please feel free to open an issue in this repository.
